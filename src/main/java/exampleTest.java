@@ -13,7 +13,7 @@ public class exampleTest {
     Cookies cookies;
 
     @BeforeClass
-    public void test1() {
+    public void login() {
         cookies = Tools.login();
     }
 
