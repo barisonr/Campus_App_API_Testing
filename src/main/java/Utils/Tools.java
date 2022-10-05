@@ -1,4 +1,4 @@
-package Tools;
+package Utils;
 
 import io.restassured.http.ContentType;
 import io.restassured.http.Cookies;
@@ -12,7 +12,7 @@ import static io.restassured.RestAssured.*;
 
 public class Tools {
     @Test
-    public Cookies login() {
+    public static Cookies login() {
         baseURI = "https://demo.mersys.io/";
 
         Map<String, String> credential = new HashMap<>();
@@ -20,16 +20,17 @@ public class Tools {
         credential.put("password", "Richfield2020!");
         credential.put("rememberMe", "true");
 
+        System.out.println("Logging in...");
+
         return given()
                 .contentType(ContentType.JSON)
                 .body(credential)
 
-                .when()
+        .when()
                 .post("auth/login")
 
-                .then()
-                //.log().cookies()
+        .then()
                 .statusCode(200)
-                .extract().response().getDetailedCookies();
+        .extract().response().getDetailedCookies();
     }
 }
