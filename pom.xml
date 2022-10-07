@@ -46,13 +46,6 @@
             <version>5.2.2</version>
         </dependency>
 
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-testng</artifactId>
-            <version>7.8.1</version>
-        </dependency>
-
-
     </dependencies>
 
 </project>
