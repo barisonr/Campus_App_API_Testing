@@ -9,7 +9,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
-public class exampleTest {
+public class ExampleTest {
     Cookies cookies;
 
     @BeforeClass
@@ -18,11 +18,11 @@ public class exampleTest {
     }
 
 
-    @Test
+    @Test(testName = "Create a Country")
     public void createCountry() {
 
         Map<String, String> country = new HashMap<>();
-        country.put("name", "testdeneme1");
+        country.put("name", "testdeneme12");
         country.put("code", "1234");
 
 
