@@ -22,7 +22,7 @@ public class ExampleTest {
     public void createCountry() {
 
         Map<String, String> country = new HashMap<>();
-        country.put("name", "testdeneme12");
+        country.put("name", "testdeneme");
         country.put("code", "1234");
 
 
